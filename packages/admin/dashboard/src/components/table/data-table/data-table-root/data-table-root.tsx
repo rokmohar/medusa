@@ -180,6 +180,8 @@ export const DataTableRoot = <TData,>({
                                 isStickyHeader,
                               "start-[68px]":
                                 isStickyHeader && hasSelect && !isSelectHeader,
+                              "max-w-[40vw] sm:max-w-none":
+                                isStickyHeader && !isSelectHeader,
                               "after:bg-ui-border-base":
                                 showStickyBorder &&
                                 isStickyHeader &&
@@ -268,6 +270,8 @@ export const DataTableRoot = <TData,>({
                             "bg-ui-bg-subtle group-hover/row:bg-ui-bg-subtle-hover":
                               isOdd && isStickyCell,
                             "start-[68px]": hasLeftOffset,
+                            "max-w-[40vw] overflow-hidden sm:max-w-none sm:overflow-visible":
+                              isStickyCell && !isSelectCell,
                             "after:bg-ui-border-base":
                               showStickyBorder && isStickyCell && !isSelectCell,
                             "!hover:bg-ui-bg-disabled !bg-ui-bg-disabled":
@@ -291,6 +295,7 @@ export const DataTableRoot = <TData,>({
                                   "flex size-full items-center pe-6",
                                   {
                                     "ps-6": isTabableLink && !hasLeftOffset,
+                                    "pe-3 sm:pe-6": isFirstCell,
                                   }
                                 )}
                               >

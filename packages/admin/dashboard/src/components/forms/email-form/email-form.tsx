@@ -19,7 +19,7 @@ export const EmailForm = ({ control, layout = "stack" }: EmailFormProps) => {
     <div
       className={clx("gap-4", {
         "flex flex-col": layout === "stack",
-        "grid grid-cols-2": layout === "grid",
+        "grid grid-cols-1 md:grid-cols-2": layout === "grid",
       })}
     >
       <Form.Field

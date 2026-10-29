@@ -15,7 +15,7 @@ export const SectionRow = ({ title, value, actions }: SectionRowProps) => {
       className={clx(
         `grid w-full grid-cols-2 items-center gap-4 px-6 py-4 text-ui-fg-subtle`,
         {
-          "grid-cols-[1fr_1fr_28px]": !!actions,
+          "grid-cols-[minmax(0,1fr)_minmax(0,1fr)_28px]": !!actions,
         }
       )}
     >
@@ -27,7 +27,7 @@ export const SectionRow = ({ title, value, actions }: SectionRowProps) => {
         <Text
           size="small"
           leading="compact"
-          className="whitespace-pre-line text-pretty"
+          className="whitespace-pre-line text-pretty break-words"
         >
           {value ?? "-"}
         </Text>

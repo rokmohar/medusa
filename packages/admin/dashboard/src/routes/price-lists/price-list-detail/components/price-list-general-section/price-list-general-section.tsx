@@ -35,8 +35,8 @@ export const PriceListGeneralSection = ({
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
-        <Heading>{priceList.title}</Heading>
+      <div className="flex items-center justify-between gap-x-4 px-6 py-4">
+        <Heading className="min-w-0 break-words">{priceList.title}</Heading>
         <div className="flex items-center gap-x-4">
           <StatusBadge color={color}>{text}</StatusBadge>
           <ActionMenu

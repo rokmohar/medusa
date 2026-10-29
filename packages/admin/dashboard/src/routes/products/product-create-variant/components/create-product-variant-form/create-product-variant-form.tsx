@@ -272,7 +272,7 @@ export const CreateProductVariantForm = ({
         >
           <RouteFocusModal.Header>
             <div className="flex w-full items-center justify-between gap-x-4">
-              <div className="-my-2 w-full max-w-[600px] border-l">
+              <div className="-my-2 w-full min-w-0 max-w-[600px] border-l">
                 <ProgressTabs.List className="grid w-full grid-cols-3">
                   <ProgressTabs.Trigger
                     status={tabState.detail}

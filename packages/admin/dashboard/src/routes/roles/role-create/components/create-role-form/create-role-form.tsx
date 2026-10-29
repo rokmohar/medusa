@@ -189,7 +189,7 @@ export const CreateRoleForm = () => {
           className="flex h-full flex-col overflow-hidden"
         >
           <RouteFocusModal.Header>
-            <div className="-my-2 w-full border-l">
+            <div className="-my-2 w-full min-w-0 border-l">
               <ProgressTabs.List className="justify-start-start flex w-full items-center">
                 <ProgressTabs.Trigger
                   status={tabState[Tab.DETAILS]}
@@ -213,7 +213,7 @@ export const CreateRoleForm = () => {
               className="size-full overflow-y-auto"
               value={Tab.DETAILS}
             >
-              <div className="flex flex-col items-center overflow-auto p-16">
+              <div className="flex flex-col items-center overflow-auto p-4 md:p-16">
                 <div className="flex w-full max-w-[720px] flex-col gap-y-8">
                   <div>
                     <Heading>{t("roles.create.header")}</Heading>

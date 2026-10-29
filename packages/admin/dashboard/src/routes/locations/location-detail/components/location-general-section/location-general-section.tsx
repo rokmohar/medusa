@@ -366,11 +366,11 @@ function ServiceZone({
           <Map />
         </IconAvatar>
 
-        <div className="grow-1 flex flex-1 flex-col">
+        <div className="grow-1 flex min-w-0 flex-1 flex-col">
           <Text size="small" leading="compact" weight="plus">
             {zone.name}
           </Text>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-x-2">
             <ListSummary
               variant="base"
               list={countries.map((c) => c.display_name)}
@@ -392,7 +392,7 @@ function ServiceZone({
           </div>
         </div>
 
-        <div className="flex grow-0 items-center gap-4">
+        <div className="flex shrink-0 grow-0 items-center gap-4">
           <IconButton
             size="small"
             onClick={() => setOpen((s) => !s)}

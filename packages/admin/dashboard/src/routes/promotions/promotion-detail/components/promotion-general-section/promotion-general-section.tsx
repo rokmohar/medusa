@@ -80,9 +80,9 @@ export const PromotionGeneralSection = ({
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
-        <div className="flex flex-col">
-          <Heading>{promotion.code}</Heading>
+      <div className="flex items-center justify-between gap-x-4 px-6 py-4">
+        <div className="flex min-w-0 flex-col">
+          <Heading className="break-words">{promotion.code}</Heading>
         </div>
 
         <div className="flex items-center gap-x-2">

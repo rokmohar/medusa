@@ -252,7 +252,7 @@ const Payment = ({
         />
       </div>
       {showCapture && (
-        <div className="flex items-center justify-between bg-ui-bg-subtle px-6 py-4">
+        <div className="flex items-center justify-between gap-x-4 bg-ui-bg-subtle px-6 py-4">
           <div className="flex items-center gap-x-2">
             <ArrowDownRightMini className="shrink-0 text-ui-fg-muted" />
             <Text size="small" leading="compact">
@@ -380,7 +380,7 @@ const PendingAuthorizationBanner = ({
   }
 
   return (
-    <div className="flex items-center justify-between bg-ui-bg-subtle px-6 py-4">
+    <div className="flex items-center justify-between gap-x-4 bg-ui-bg-subtle px-6 py-4">
       <div className="flex items-center gap-x-2">
         <ArrowDownRightMini className="shrink-0 text-ui-fg-muted" />
         <Text size="small" leading="compact">

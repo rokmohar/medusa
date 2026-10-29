@@ -226,7 +226,7 @@ export const EditProductMediaForm = ({ product }: ProductMediaViewProps) => {
               onDragCancel={handleDragCancel}
             >
               <div className="size-full overflow-auto bg-ui-bg-subtle">
-                <div className="grid h-fit auto-rows-auto grid-cols-4 gap-6 p-6">
+                <div className="grid h-fit auto-rows-auto grid-cols-2 gap-4 p-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6 lg:p-6">
                   <SortableContext
                     items={fields.map((m) => m.field_id)}
                     strategy={rectSortingStrategy}

@@ -61,7 +61,7 @@ export const CreatePolicyForm = () => {
       >
         <RouteFocusModal.Header />
         <RouteFocusModal.Body className="size-full overflow-y-auto">
-          <div className="flex flex-col items-center overflow-auto p-16">
+          <div className="flex flex-col items-center overflow-auto p-4 md:p-16">
             <div className="flex w-full max-w-[720px] flex-col gap-y-8">
               <div>
                 <Heading>{t("policies.create.header")}</Heading>
@@ -83,7 +83,7 @@ export const CreatePolicyForm = () => {
                     </Form.Item>
                   )}
                 />
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Form.Field
                     control={form.control}
                     name="resource"

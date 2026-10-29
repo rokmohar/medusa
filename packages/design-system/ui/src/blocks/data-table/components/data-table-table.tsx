@@ -259,6 +259,7 @@ const DataTableTable = (props: DataTableTableProps) => {
                                   isActionHeader,
                                 "after:absolute after:inset-y-0 after:right-0 after:h-full after:w-px after:bg-transparent after:content-['']":
                                   isFirstColumn,
+                                "max-w-[40vw] sm:max-w-none": isFirstColumn,
                                 "after:bg-ui-border-base":
                                   showStickyBorder && isFirstColumn,
                                 "sticky bg-ui-bg-subtle":
@@ -363,6 +364,7 @@ const DataTableTable = (props: DataTableTableProps) => {
                                     isFirstColumn || isSelectCell,
                                   "after:absolute after:inset-y-0 after:right-0 after:h-full after:w-px after:bg-transparent after:content-['']":
                                     isFirstColumn,
+                                  "max-w-[40vw] sm:max-w-none": isFirstColumn,
                                   "after:bg-ui-border-base":
                                     showStickyBorder && isFirstColumn,
                                   "left-0":
@@ -453,6 +455,7 @@ const DataTableTable = (props: DataTableTableProps) => {
                               isActionHeader,
                             "after:absolute after:inset-y-0 after:right-0 after:h-full after:w-px after:bg-transparent after:content-['']":
                               isFirstColumn,
+                            "max-w-[40vw] sm:max-w-none": isFirstColumn,
                             "after:bg-ui-border-base":
                               showStickyBorder && isFirstColumn,
                             "sticky bg-ui-bg-subtle":
@@ -543,6 +546,7 @@ const DataTableTable = (props: DataTableTableProps) => {
                                 isFirstColumn || isSelectCell,
                               "after:absolute after:inset-y-0 after:right-0 after:h-full after:w-px after:bg-transparent after:content-['']":
                                 isFirstColumn,
+                              "max-w-[40vw] sm:max-w-none": isFirstColumn,
                               "after:bg-ui-border-base":
                                 showStickyBorder && isFirstColumn,
                               "left-0":

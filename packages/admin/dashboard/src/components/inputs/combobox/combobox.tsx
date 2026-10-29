@@ -373,14 +373,14 @@ const ComboboxImpl = <T extends Value = string>(
             {showSelected && (
               <div
                 className={clx(
-                  "pointer-events-none absolute inset-y-0 flex size-full items-center",
+                  "pointer-events-none absolute inset-y-0 end-8 flex items-center overflow-hidden",
                   {
                     "start-[calc(var(--tag-width)+8px)]": showTag,
                     "start-2": !showTag,
                   }
                 )}
               >
-                <Text size="small" leading="compact">
+                <Text size="small" leading="compact" className="truncate">
                   {t("general.selected")}
                 </Text>
               </div>
@@ -388,7 +388,7 @@ const ComboboxImpl = <T extends Value = string>(
             {hideInput && (
               <div
                 className={clx(
-                  "pointer-events-none absolute inset-y-0 flex size-full items-center overflow-hidden",
+                  "pointer-events-none absolute inset-y-0 end-8 flex items-center overflow-hidden",
                   {
                     "start-[calc(var(--tag-width)+8px)]": showTag,
                     "start-2": !showTag,

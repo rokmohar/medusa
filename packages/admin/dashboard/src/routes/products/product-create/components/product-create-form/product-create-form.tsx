@@ -273,7 +273,7 @@ export const ProductCreateForm = ({
           className="flex h-full flex-col overflow-hidden"
         >
           <RouteFocusModal.Header>
-            <div className="-my-2 w-full border-l">
+            <div className="-my-2 w-full min-w-0 border-l">
               <ProgressTabs.List className="justify-start-start flex w-full items-center">
                 <ProgressTabs.Trigger
                   status={tabState[Tab.DETAILS]}

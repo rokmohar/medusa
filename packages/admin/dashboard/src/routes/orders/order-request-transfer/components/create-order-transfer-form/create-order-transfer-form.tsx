@@ -129,7 +129,7 @@ export function CreateOrderTransferForm({
                     <Form.Label>{t("orders.transfer.ownerType")}</Form.Label>
                     <Form.Control>
                       <RadioGroup
-                        className="grid grid-cols-2 gap-3"
+                        className="grid grid-cols-1 gap-3 md:grid-cols-2"
                         {...field}
                         value={field.value}
                         onValueChange={(value) => {

@@ -119,7 +119,7 @@ export const TranslationList = () => {
         main: (
           <>
             <LayoutComposer.Entry id="translations-header">
-              <Container className="flex items-center justify-between px-6 py-4">
+              <Container className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 py-4">
                 <div className="flex flex-col">
                   <Heading>Manage {t("translations.domain")}</Heading>
                   <Text className="text-ui-fg-subtle" size="small">
@@ -127,6 +127,7 @@ export const TranslationList = () => {
                   </Text>
                 </div>
                 <Button
+                  className="shrink-0"
                   size="small"
                   variant="secondary"
                   onClick={handleManageEntities}

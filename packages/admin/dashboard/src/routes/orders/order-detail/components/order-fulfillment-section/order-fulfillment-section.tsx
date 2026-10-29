@@ -60,11 +60,11 @@ const UnfulfilledItem = ({
   return (
     <div
       key={item.id}
-      className="grid grid-cols-2 items-start px-6 py-4 text-ui-fg-subtle"
+      className="grid grid-cols-1 items-start gap-x-4 gap-y-3 px-6 py-4 text-ui-fg-subtle sm:grid-cols-2"
     >
-      <div className="flex items-start gap-x-4">
+      <div className="flex min-w-0 items-start gap-x-4">
         <Thumbnail src={item.thumbnail} />
-        <div>
+        <div className="min-w-0 break-words">
           <Text
             size="small"
             leading="compact"
@@ -156,10 +156,10 @@ const UnfulfilledItemDisplay = ({
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 py-4">
         <Heading level="h2">{t("orders.fulfillment.unfulfilledItems")}</Heading>
 
-        <div className="flex items-center gap-x-4">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           {requiresShipping && (
             <StatusBadge color="red" className="text-nowrap">
               {t("orders.fulfillment.requiresShipping")}

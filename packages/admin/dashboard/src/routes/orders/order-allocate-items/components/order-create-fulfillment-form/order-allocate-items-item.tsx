@@ -99,8 +99,8 @@ export function OrderAllocateItemsItem({
   )
 
   return (
-    <div className="my-2 min-w-[720px] divide-y divide-dashed rounded-xl bg-ui-bg-subtle shadow-elevation-card-rest">
-      <div className="flex items-center gap-x-3 p-3 text-sm">
+    <div className="my-2 divide-y divide-dashed rounded-xl bg-ui-bg-subtle shadow-elevation-card-rest">
+      <div className="flex flex-col gap-3 p-3 text-sm md:flex-row md:items-center">
         <div className="flex flex-1 items-center">
           <div className="flex items-center gap-x-3">
             {hasQuantityError && (
@@ -131,7 +131,7 @@ export function OrderAllocateItemsItem({
 
         <div
           className={clx(
-            "flex flex-1 items-center gap-x-3",
+            "flex flex-1 flex-wrap items-center gap-3",
             hasInventoryKit ? "justify-end" : "justify-between"
           )}
         >

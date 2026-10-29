@@ -19,17 +19,19 @@ export const TranslationListSection = ({
       {entities.map((entity) => (
         <div
           key={entity.reference}
-          className="grid grid-cols-[250px_1fr_auto] items-center gap-x-4 px-6 py-4"
+          className="flex items-center justify-between gap-x-4 px-6 py-4"
         >
-          <Text size="small" weight="plus">
-            {entity.label}
-          </Text>
-          <Text size="small" className="text-ui-fg-subtle">
-            {t("translations.list.metrics", {
-              translated: (entity.translatedCount ?? 0).toLocaleString(),
-              total: (entity.totalCount ?? 0).toLocaleString(),
-            })}
-          </Text>
+          <div className="flex min-w-0 flex-1 flex-col md:grid md:grid-cols-[250px_1fr] md:items-center md:gap-x-4">
+            <Text size="small" weight="plus">
+              {entity.label}
+            </Text>
+            <Text size="small" className="text-ui-fg-subtle">
+              {t("translations.list.metrics", {
+                translated: (entity.translatedCount ?? 0).toLocaleString(),
+                total: (entity.totalCount ?? 0).toLocaleString(),
+              })}
+            </Text>
+          </div>
           <Link
             to={`/settings/translations/edit?reference=${entity.reference}`}
           >

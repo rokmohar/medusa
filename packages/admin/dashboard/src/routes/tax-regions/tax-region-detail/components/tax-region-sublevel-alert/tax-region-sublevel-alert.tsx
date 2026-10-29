@@ -40,7 +40,7 @@ export const TaxRegionSublevelAlert = ({
             {t("taxRegions.fields.sublevels.alert.description")}
           </Text>
         </div>
-        <div className="flex items-center gap-x-3">
+        <div className="flex flex-wrap items-center gap-3">
           <Button
             variant="secondary"
             size="small"

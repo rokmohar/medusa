@@ -143,8 +143,8 @@ const DrawerHeader = React.forwardRef<
       {...props}
     >
       <div className={clx("flex flex-col gap-y-1", className)}>{children}</div>
-      <div className="flex items-center gap-x-2">
-        <Kbd>esc</Kbd>
+      <div className="flex shrink-0 items-center gap-x-2">
+        <Kbd className="hidden sm:inline-flex">esc</Kbd>
         <RadixDialog.Close asChild>
           <IconButton size="small" type="button" variant="transparent">
             <XMark />

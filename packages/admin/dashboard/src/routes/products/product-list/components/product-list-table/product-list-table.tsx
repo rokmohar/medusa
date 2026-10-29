@@ -55,7 +55,7 @@ export const ProductListTable = () => {
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 py-4">
         <Heading level="h1">{t("products.domain")}</Heading>
         <div className="flex items-center justify-center gap-x-2">
           <Button size="small" variant="secondary" asChild>

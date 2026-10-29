@@ -8,6 +8,7 @@ import {
   clx,
 } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
+import { TruncatedText } from "../../../../../components/common/truncated-text"
 import { getTransactionState, getTransactionStateColor } from "../../../utils"
 import { HttpTypes } from "@medusajs/types"
 import { TransactionState, TransactionStepState } from "../../../types"
@@ -32,27 +33,29 @@ export const WorkflowExecutionGeneralSection = ({
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-x-0.5">
-          <Heading>{cleanId}</Heading>
+      <div className="flex items-center justify-between gap-x-4 px-6 py-4">
+        <div className="flex min-w-0 items-center gap-x-0.5">
+          <Heading className="min-w-0 break-all">{cleanId}</Heading>
           <Copy content={cleanId} className="text-ui-fg-muted" />
         </div>
-        <StatusBadge color={stateColor}>{translatedState}</StatusBadge>
+        <StatusBadge color={stateColor} className="shrink-0">
+          {translatedState}
+        </StatusBadge>
       </div>
       <div className="grid grid-cols-2 px-6 py-4 text-ui-fg-subtle">
         <Text size="small" leading="compact" weight="plus">
           {t("workflowExecutions.workflowIdLabel")}
         </Text>
-        <Badge size="2xsmall" className="w-fit">
-          {execution.workflow_id}
+        <Badge size="2xsmall" className="w-fit max-w-full">
+          <TruncatedText text={execution.workflow_id} />
         </Badge>
       </div>
       <div className="grid grid-cols-2 px-6 py-4 text-ui-fg-subtle">
         <Text size="small" leading="compact" weight="plus">
           {t("workflowExecutions.transactionIdLabel")}
         </Text>
-        <Badge size="2xsmall" className="w-fit">
-          {execution.transaction_id}
+        <Badge size="2xsmall" className="w-fit max-w-full">
+          <TruncatedText text={execution.transaction_id} />
         </Badge>
       </div>
       <div className="grid grid-cols-2 px-6 py-4 text-ui-fg-subtle">
@@ -94,8 +97,8 @@ const Progress = ({
   )
 
   return (
-    <div className="flex w-fit items-center gap-x-2">
-      <div className="flex items-center gap-x-[3px]">
+    <div className="flex w-fit max-w-full flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-[3px]">
         {actionableSteps.map((step) => (
           <div
             key={step.id}

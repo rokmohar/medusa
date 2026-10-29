@@ -66,7 +66,7 @@ export const CreateProductOptionOrganize = ({
   }
 
   return (
-    <div className="px-16">
+    <div className="px-4 md:px-16">
       <div className="mx-auto flex w-full max-w-[720px] flex-col gap-y-8">
         <div className="flex flex-col gap-y-2 overflow-hidden rounded-xl border border-ui-border-base">
           <div className="border-b-base border-b bg-ui-bg-component p-2">

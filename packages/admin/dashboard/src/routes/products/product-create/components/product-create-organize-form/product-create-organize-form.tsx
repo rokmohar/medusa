@@ -18,7 +18,7 @@ export const ProductCreateOrganizeForm = ({ form }: ProductAttributesProps) => {
 
   return (
     <StackedFocusModal id={SC_STACKED_MODAL_ID}>
-      <div className="flex flex-col items-center p-16">
+      <div className="flex flex-col items-center p-4 md:p-16">
         <div className="flex w-full max-w-[720px] flex-col gap-y-8">
           <ProductCreateOrganizationSection form={form} />
           <FormExtensionZone fields={fields} form={form} />

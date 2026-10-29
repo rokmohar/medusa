@@ -413,12 +413,12 @@ const Item = ({
     <>
       <div
         key={item.id}
-        className="grid grid-cols-2 items-center gap-x-4 px-6 py-4 text-ui-fg-subtle"
+        className="grid grid-cols-1 items-center gap-x-4 gap-y-3 px-6 py-4 text-ui-fg-subtle sm:grid-cols-2"
       >
         <div className="flex justify-between gap-x-2">
-          <div className="group flex items-start gap-x-4">
+          <div className="group flex min-w-0 items-start gap-x-4">
             <Thumbnail src={item.thumbnail} />
-            <div>
+            <div className="min-w-0 break-words">
               <Text size="small" leading="compact" className="text-ui-fg-base">
                 {item.title}
               </Text>
@@ -435,6 +435,16 @@ const Item = ({
               <Text size="small">
                 {item.variant?.options?.map((o) => o.value).join(" · ")}
               </Text>
+              {isInventoryManaged && hasUnfulfilledItems && (
+                <StatusBadge
+                  color={reservation ? "green" : "orange"}
+                  className="mt-1 text-nowrap"
+                >
+                  {reservation
+                    ? t("orders.reservations.allocatedLabel")
+                    : t("orders.reservations.notAllocatedLabel")}
+                </StatusBadge>
+              )}
             </div>
           </div>
           {appliedPromoCodes.length > 0 && (
@@ -459,25 +469,10 @@ const Item = ({
             </Text>
           </div>
 
-          <div className="flex items-center gap-x-2">
-            <div className="w-fit min-w-[27px]">
-              <Text size="small">
-                <span className="tabular-nums">{item.quantity}</span>x
-              </Text>
-            </div>
-
-            <div className="overflow-visible">
-              {isInventoryManaged && hasUnfulfilledItems && (
-                <StatusBadge
-                  color={reservation ? "green" : "orange"}
-                  className="text-nowrap"
-                >
-                  {reservation
-                    ? t("orders.reservations.allocatedLabel")
-                    : t("orders.reservations.notAllocatedLabel")}
-                </StatusBadge>
-              )}
-            </div>
+          <div className="w-fit min-w-[27px]">
+            <Text size="small">
+              <span className="tabular-nums">{item.quantity}</span>x
+            </Text>
           </div>
 
           <div className="flex items-center justify-end">
@@ -574,7 +569,7 @@ const Cost = ({
   secondaryValue?: string
   tooltip?: ReactNode
 }) => (
-  <div className="grid grid-cols-3 items-center">
+  <div className="grid grid-cols-[1fr_auto_auto] items-center gap-x-4 sm:grid-cols-3 sm:gap-x-0">
     <Text size="small" leading="compact">
       {label} {tooltip}
     </Text>

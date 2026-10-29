@@ -40,14 +40,14 @@ export const ReservationListTable = () => {
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between gap-x-4 px-6 py-4">
         <div>
           <Heading>{t("reservations.domain")}</Heading>
           <Text className="text-ui-fg-subtle" size="small">
             {t("reservations.subtitle")}
           </Text>
         </div>
-        <Button variant="secondary" size="small" asChild>
+        <Button className="shrink-0" variant="secondary" size="small" asChild>
           <Link to="create">{t("actions.create")}</Link>
         </Button>
       </div>

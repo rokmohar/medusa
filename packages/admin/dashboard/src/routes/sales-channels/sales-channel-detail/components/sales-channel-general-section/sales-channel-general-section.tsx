@@ -56,8 +56,8 @@ export const SalesChannelGeneralSection = ({
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
-        <Heading>{salesChannel.name}</Heading>
+      <div className="flex items-center justify-between gap-x-4 px-6 py-4">
+        <Heading className="min-w-0 break-words">{salesChannel.name}</Heading>
         <div className="flex items-center gap-x-2">
           <StatusBadge color={salesChannel.is_disabled ? "red" : "green"}>
             {t(`general.${salesChannel.is_disabled ? "disabled" : "enabled"}`)}

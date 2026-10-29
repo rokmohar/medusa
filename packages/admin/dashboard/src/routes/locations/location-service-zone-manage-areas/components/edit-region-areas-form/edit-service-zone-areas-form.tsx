@@ -88,7 +88,7 @@ export function EditServiceZoneAreasForm({
 
         <RouteFocusModal.Body className="flex flex-1 flex-col overflow-auto">
           <StackedFocusModal id={GEO_ZONE_STACKED_MODAL_ID}>
-            <div className="flex flex-col items-center p-16">
+            <div className="flex flex-col items-center p-4 md:p-16">
               <div className="flex w-full max-w-[720px] flex-col gap-y-8">
                 <Heading>
                   {t("stockLocations.serviceZones.manageAreas.header", {

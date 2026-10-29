@@ -203,7 +203,7 @@ export const CreateRegionForm = ({ currencies }: CreateRegionFormProps) => {
         <RouteFocusModal.Body className="flex overflow-hidden">
           <div
             className={clx(
-              "flex h-full w-full flex-col items-center overflow-y-auto p-16"
+              "flex h-full w-full flex-col items-center overflow-y-auto p-4 md:p-16"
             )}
             id="form-section"
           >

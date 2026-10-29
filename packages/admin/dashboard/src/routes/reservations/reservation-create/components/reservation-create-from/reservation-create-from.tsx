@@ -152,7 +152,7 @@ export const ReservationCreateForm = (props: { inventoryItemId?: string }) => {
         <RouteFocusModal.Body className="flex flex-1 flex-col items-center overflow-auto py-16">
           <div className="flex w-full max-w-[720px] flex-col gap-y-8">
             <Heading>{t("inventory.reservation.create")}</Heading>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <Form.Field
                 key={"inventory_item_id"}
                 control={form.control}

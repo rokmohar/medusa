@@ -76,7 +76,7 @@ export const CreateSalesChannelForm = () => {
                 </Text>
               </div>
               <div className="flex flex-col gap-y-4">
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-1 md:grid-cols-2">
                   <Form.Field
                     control={form.control}
                     name="name"

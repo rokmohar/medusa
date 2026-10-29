@@ -64,7 +64,7 @@ export const CreateShippingOptionTypeForm = () => {
   return (
     <RouteFocusModal.Form form={form}>
       <KeyboundForm onSubmit={handleSubmit} className="flex h-full flex-col">
-        <RouteFocusModal.Body className="flex flex-col items-center overflow-auto p-16">
+        <RouteFocusModal.Body className="flex flex-col items-center overflow-auto p-4 md:p-16">
           <div className="flex w-full max-w-[720px] flex-col gap-y-8">
             <div>
               <Heading>{t("shippingOptionTypes.create.header")}</Heading>

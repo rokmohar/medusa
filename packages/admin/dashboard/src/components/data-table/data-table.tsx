@@ -390,8 +390,8 @@ export const DataTable = <TData,>({
         filterBarContent={filterBarContent}
         alwaysShowFilterBar={alwaysShowFilterBar}
       >
-        <div className="flex w-full items-center justify-between gap-2">
-          <div className="flex items-center gap-x-4">
+        <div className="flex w-full flex-wrap items-center justify-between gap-2">
+          <div className="flex min-w-0 items-center gap-x-4 empty:hidden md:empty:flex">
             {shouldRenderHeading && (
               <div>
                 {heading && <Heading level={headingLevel}>{heading}</Heading>}
@@ -410,7 +410,7 @@ export const DataTable = <TData,>({
               />
             )}
           </div>
-          <div className="flex items-center gap-x-2">
+          <div className="flex w-full flex-wrap items-center justify-end gap-2 md:w-auto md:flex-nowrap">
             {enableFiltering && (
               <UiDataTable.FilterMenu tooltip={toolbarTranslations.filter} />
             )}
@@ -423,7 +423,7 @@ export const DataTable = <TData,>({
               />
             )}
             {enableSearch && (
-              <div className="w-full md:w-auto">
+              <div className="order-first w-full md:order-none md:w-auto">
                 <UiDataTable.Search
                   placeholder={t("filters.searchLabel")}
                   autoFocus={autoFocusSearch}

@@ -14,9 +14,9 @@ export const InventoryItemReservationsSection = ({
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between gap-x-4 px-6 py-4">
         <Heading level="h2">{t("reservations.domain")}</Heading>
-        <Button size="small" variant="secondary" asChild>
+        <Button className="shrink-0" size="small" variant="secondary" asChild>
           <Link to={`/reservations/create?item_id=${inventoryItem.id}`}>
             {t("actions.create")}
           </Link>

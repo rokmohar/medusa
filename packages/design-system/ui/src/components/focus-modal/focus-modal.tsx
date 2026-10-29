@@ -125,13 +125,13 @@ const FocusModalHeader = React.forwardRef<
       )}
       {...props}
     >
-      <div className="flex items-center gap-x-2">
+      <div className="flex shrink-0 items-center gap-x-2">
         <RadixDialog.Close asChild>
           <IconButton size="small" type="button" variant="transparent">
             <XMark />
           </IconButton>
         </RadixDialog.Close>
-        <Kbd>esc</Kbd>
+        <Kbd className="hidden sm:inline-flex">esc</Kbd>
       </div>
       {children}
     </div>

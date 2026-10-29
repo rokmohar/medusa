@@ -81,7 +81,7 @@ const ProgressTabsTrigger = React.forwardRef<
     <RadixTabs.Trigger
       ref={ref}
       className={clx(
-        "txt-compact-small-plus inline-flex h-[52px] w-full max-w-[200px] flex-1 items-center gap-x-2 border-r border-r-ui-border-base bg-ui-bg-subtle px-4 text-left text-ui-fg-muted outline-none transition-fg",
+        "txt-compact-small-plus inline-flex h-[52px] w-full max-w-[200px] flex-1 items-center gap-x-2 border-r border-r-ui-border-base bg-ui-bg-subtle px-3 text-left text-ui-fg-muted outline-none transition-fg sm:px-4",
         "group/trigger overflow-hidden text-ellipsis whitespace-nowrap",
         "disabled:bg-ui-bg-disabled disabled:text-ui-fg-muted",
         "hover:bg-ui-bg-subtle-hover",
@@ -92,7 +92,7 @@ const ProgressTabsTrigger = React.forwardRef<
       {...props}
     >
       <ProgressIndicator status={status} />
-      {children}
+      <span className="truncate">{children}</span>
     </RadixTabs.Trigger>
   )
 )

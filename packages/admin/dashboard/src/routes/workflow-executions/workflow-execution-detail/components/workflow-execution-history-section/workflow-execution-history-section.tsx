@@ -117,7 +117,7 @@ const Event = ({
 
   return (
     <div
-      className="grid grid-cols-[20px_1fr] items-start gap-x-2 px-2"
+      className="grid grid-cols-[20px_minmax(0,1fr)] items-start gap-x-2 px-2"
       id={stepId}
     >
       <div className="grid h-full grid-rows-[20px_1fr] items-center justify-center gap-y-0.5">
@@ -156,11 +156,16 @@ const Event = ({
       </div>
       <RadixCollapsible.Root open={open} onOpenChange={setOpen}>
         <RadixCollapsible.Trigger asChild>
-          <div className="group flex cursor-pointer items-start justify-between outline-none">
-            <Text size="small" leading="compact" weight="plus">
+          <div className="group flex cursor-pointer items-start justify-between gap-x-2 outline-none">
+            <Text
+              size="small"
+              leading="compact"
+              weight="plus"
+              className="min-w-0 break-words"
+            >
               {identifier}
             </Text>
-            <div className="flex items-center gap-x-2">
+            <div className="flex shrink-0 items-center gap-x-2">
               <StepState
                 state={step.invoke.state}
                 startedAt={step.startedAt}

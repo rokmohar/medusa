@@ -18,7 +18,7 @@ export const ProductCreateAttributeSection = ({
   return (
     <div id="attributes" className="flex flex-col gap-y-8">
       <Heading level="h2">{t("products.attributes")}</Heading>
-      <div className="grid grid-cols-2 gap-x-4 gap-y-8">
+      <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2">
         <Form.Field
           control={form.control}
           name="origin_country"
@@ -52,7 +52,7 @@ export const ProductCreateAttributeSection = ({
           }}
         />
       </div>
-      <div className="grid grid-cols-2 gap-x-4 gap-y-8">
+      <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2">
         <Form.Field
           control={form.control}
           name="width"

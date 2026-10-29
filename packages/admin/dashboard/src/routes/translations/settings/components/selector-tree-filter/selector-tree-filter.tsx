@@ -39,8 +39,8 @@ export const SelectorTreeFilter = ({
     onSelectAllToggle(!allSelected)
   }
   return (
-    <div className={clx("flex items-center gap-x-2", className)}>
-      <div className="flex-1">
+    <div className={clx("flex flex-wrap items-center gap-2", className)}>
+      <div className="w-full sm:w-auto sm:flex-1">
         <Input
           size="small"
           type="search"

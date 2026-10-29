@@ -180,7 +180,7 @@ const Pagination = React.forwardRef<HTMLDivElement, TablePaginationProps>(
       <div
         ref={ref}
         className={clx(
-          "txt-compact-small-plus flex w-full items-center justify-between px-3 py-4 text-ui-fg-subtle",
+          "txt-compact-small-plus flex w-full flex-wrap items-center justify-between gap-y-2 px-3 py-4 text-ui-fg-subtle",
           className
         )}
         {...props}
@@ -190,7 +190,7 @@ const Pagination = React.forwardRef<HTMLDivElement, TablePaginationProps>(
           <Minus className="text-ui-fg-muted" />
           <p>{`${to} ${translations.of} ${count} ${translations.results}`}</p>
         </div>
-        <div className="flex items-center gap-x-2">
+        <div className="ml-auto flex items-center gap-x-2">
           <div className="inline-flex items-center gap-x-1 px-3 py-[5px]">
             <p>
               {pageIndex + 1} {translations.of} {Math.max(pageCount, 1)}{" "}

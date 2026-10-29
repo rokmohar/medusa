@@ -49,7 +49,7 @@ export const ProfileGeneralSection = ({ user }: ProfileGeneralSectionProps) => {
         <Text size="small" leading="compact" weight="plus">
           {t("fields.email")}
         </Text>
-        <Text size="small" leading="compact">
+        <Text size="small" leading="compact" className="break-words">
           {user.email}
         </Text>
       </div>

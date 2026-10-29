@@ -63,7 +63,7 @@ export const RegionGeneralSection = ({
       <SectionRow
         title={t("fields.paymentProviders")}
         value={
-          <div className="inline-flex">
+          <div className="inline-flex min-w-0">
             {region.payment_providers?.length ? (
               <ListSummary
                 list={region.payment_providers.map((p) => formatProvider(p.id))}

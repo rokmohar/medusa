@@ -95,7 +95,7 @@ export const ErrorBoundary = () => {
 
   return (
     <div className="flex size-full min-h-[calc(100vh-57px-24px)] items-center justify-center">
-      <div className="flex flex-col gap-y-6">
+      <div className="flex min-w-0 max-w-full flex-col gap-y-6">
         <div className="flex flex-col items-center gap-y-3 text-ui-fg-subtle">
           <ExclamationCircle />
           <div className="flex flex-col items-center justify-center gap-y-1">

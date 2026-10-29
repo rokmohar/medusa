@@ -86,7 +86,7 @@ export const CreateLocationForm = () => {
                   {t("stockLocations.create.hint")}
                 </Text>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <Form.Field
                   control={form.control}
                   name="name"
@@ -103,7 +103,7 @@ export const CreateLocationForm = () => {
                   }}
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <Form.Field
                   control={form.control}
                   name="address.address_1"

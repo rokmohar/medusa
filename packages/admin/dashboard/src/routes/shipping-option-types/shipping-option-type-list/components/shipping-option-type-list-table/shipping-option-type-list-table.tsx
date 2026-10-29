@@ -43,14 +43,14 @@ export const ShippingOptionTypeListTable = () => {
 
   return (
     <Container className="divide-y p-0">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between gap-x-4 px-6 py-4">
         <div>
           <Heading>{t("shippingOptionTypes.domain")}</Heading>
           <Text className="text-ui-fg-subtle" size="small">
             {t("shippingOptionTypes.subtitle")}
           </Text>
         </div>
-        <Button size="small" variant="secondary" asChild>
+        <Button className="shrink-0" size="small" variant="secondary" asChild>
           <Link to="create">{t("actions.create")}</Link>
         </Button>
       </div>

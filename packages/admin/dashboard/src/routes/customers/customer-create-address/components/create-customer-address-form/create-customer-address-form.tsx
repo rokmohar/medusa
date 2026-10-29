@@ -91,7 +91,7 @@ export const CreateCustomerAddressForm = () => {
                   {t("customers.addresses.create.hint")}
                 </Text>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <Form.Field
                   control={form.control}
                   name="address_name"
@@ -114,7 +114,7 @@ export const CreateCustomerAddressForm = () => {
                   }}
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <Form.Field
                   control={form.control}
                   name="address_1"

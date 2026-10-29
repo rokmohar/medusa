@@ -89,10 +89,12 @@ export const StoreGeneralSection = ({ store }: StoreGeneralSectionProps) => {
         <Text size="small" leading="compact" weight="plus">
           {t("store.defaultRegion")}
         </Text>
-        <div className="flex items-center gap-x-2">
+        <div className="flex min-w-0 items-center gap-x-2">
           {region ? (
-            <Badge size="2xsmall" asChild>
-              <Link to={`/settings/regions/${region.id}`}>{region.name}</Link>
+            <Badge size="2xsmall" className="max-w-full" asChild>
+              <Link to={`/settings/regions/${region.id}`}>
+                <span className="truncate">{region.name}</span>
+              </Link>
             </Badge>
           ) : (
             <Text size="small" leading="compact">
@@ -105,11 +107,11 @@ export const StoreGeneralSection = ({ store }: StoreGeneralSectionProps) => {
         <Text size="small" leading="compact" weight="plus">
           {t("store.defaultSalesChannel")}
         </Text>
-        <div className="flex items-center gap-x-2">
+        <div className="flex min-w-0 items-center gap-x-2">
           {sales_channel ? (
-            <Badge size="2xsmall" asChild>
+            <Badge size="2xsmall" className="max-w-full" asChild>
               <Link to={`/settings/sales-channels/${sales_channel.id}`}>
-                {sales_channel.name}
+                <span className="truncate">{sales_channel.name}</span>
               </Link>
             </Badge>
           ) : (
@@ -123,11 +125,11 @@ export const StoreGeneralSection = ({ store }: StoreGeneralSectionProps) => {
         <Text size="small" leading="compact" weight="plus">
           {t("store.defaultLocation")}
         </Text>
-        <div className="flex items-center gap-x-2">
+        <div className="flex min-w-0 items-center gap-x-2">
           {stock_location ? (
-            <Badge size="2xsmall" asChild>
+            <Badge size="2xsmall" className="max-w-full" asChild>
               <Link to={`/settings/locations/${stock_location.id}`}>
-                {stock_location.name}
+                <span className="truncate">{stock_location.name}</span>
               </Link>
             </Badge>
           ) : (

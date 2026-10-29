@@ -52,7 +52,7 @@ function InventoryKitTab({ form }: InventoryKitTabProps) {
   }
 
   return (
-    <div className="flex flex-col items-center p-16">
+    <div className="flex flex-col items-center p-4 md:p-16">
       <div className="flex w-full max-w-[720px] flex-col gap-y-8">
         <div id="organize" className="flex flex-col gap-y-8">
           <Heading>{t("products.create.inventory.heading")}</Heading>

@@ -230,7 +230,7 @@ export function OrderAllocateItemsForm({ order }: OrderAllocateItemsFormProps) {
       >
         <RouteFocusModal.Header />
         <RouteFocusModal.Body className="flex h-full w-full flex-col items-center divide-y overflow-y-auto">
-          <div className="flex size-full flex-col items-center overflow-auto p-16">
+          <div className="flex size-full flex-col items-center overflow-auto p-4 md:p-16">
             <div className="flex w-full max-w-[736px] flex-col justify-center px-2 pb-2">
               <div className="flex flex-col gap-8 divide-y divide-dashed">
                 <Heading>{t("orders.allocateItems.title")}</Heading>
